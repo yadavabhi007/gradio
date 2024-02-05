@@ -13,6 +13,12 @@ demo = gr.Interface(
     fn=greet,
     inputs=[gr.Textbox(lines=5, placeholder='Write your name'), "slider"],
     outputs=["text"],
+    description='This is Demo',
+    examples=[['Abhi', 5], ['Abhishek', 6]],
+    css="""
+        body {background-color: red;}
+    """,
+    #theme="light"
 )
 
-demo.launch()
+demo.launch(auth=('Abhi', '1234'))
